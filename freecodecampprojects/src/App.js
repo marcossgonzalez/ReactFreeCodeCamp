@@ -17,6 +17,11 @@ import './App.css';
 /*
 Uma diferença importante no JSX é que você não pode mais usar a palavra class para definir classes HTML. 
 Isso ocorre porque class é uma palavra reservada em JavaScript. Em vez disso, JSX usa className.*/
+const JSX = (
+  <div className="myDiv">
+    <h1>Add a class to this div</h1>
+  </div>
+);
 
 /*const JSX = (
   <div id="challenge-node">
@@ -27,9 +32,10 @@ Isso ocorre porque class é uma palavra reservada em JavaScript. Em vez disso, J
 
 
 function App() {
-  logo
+  
   return (
-    <div></div>
+    JSX
+    //<div></div>
     //JSX
     
     //<div className="App">
