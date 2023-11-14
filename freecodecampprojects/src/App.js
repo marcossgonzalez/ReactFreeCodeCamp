@@ -22,7 +22,13 @@ Isso ocorre porque class é uma palavra reservada em JavaScript. Em vez disso, J
     //<h1>Add a class to this div</h1>
   //</div>
 //);
-
+const JSX = (
+  <div>
+    <h2>Welcome to React!</h2> <br></br>
+    <p>Be sure to close all tags!</p>
+    <hr></hr>
+  </div>
+);
 /*const JSX = (
   <div id="challenge-node">
     <h1>Hello World</h1>
