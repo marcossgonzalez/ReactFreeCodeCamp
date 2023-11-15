@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
 
 
@@ -30,21 +31,37 @@ Isso ocorre porque class é uma palavra reservada em JavaScript. Em vez disso, J
   //</div>
 //);
 
-const MyComponent = function() {
+//const MyComponent = function() {
   // Change code below this line
-  return (
-    <div><p>Hello World</p></div>
-  );
+  //return (
+    //<div><p>Hello World</p></div>
+  //);
 
 
   // Change code above this line
-}
+//}
+
 /*const JSX = (
   <div id="challenge-node">
     <h1>Hello World</h1>
     <p>Lets render this to the DOM</p>
   </div>
 );*/
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    // Change code below this line
+    return(
+      <div><h1>Hello React!</h1></div>
+    );
+
+
+    // Change code above this line
+  }
+};
 
 
 function App() {
