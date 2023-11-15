@@ -77,6 +77,7 @@ return (
 )
 */
 
+/*
 const ChildComponent = () => {
   return (
     <div>
@@ -93,16 +94,124 @@ class ParentComponent extends React.Component {
     return (
       <div>
         <h1>I am the parent</h1>
-        { /* Change code below this line */ }
-        <ChildComponent/>
+        { /* Change code below this line */ //}
+        //{/*<ChildComponent/>*}
 
-        { /* Change code above this line */ }
-      </div>
-    );
+        //{ /* Change code above this line */ //}
+      //</div>
+    //);
+  //}
+//};*/
+
+//-------------------------------------------------
+/*const TypesOfFruit = () => {
+  return (
+    <div>
+      <h2>Fruits:</h2>
+      <ul>
+        <li>Apples</li>
+        <li>Blueberries</li>
+        <li>Strawberries</li>
+        <li>Bananas</li>
+      </ul>
+    </div>
+  );
+};*/
+
+/*const Fruits = () => {
+  return (
+    <div>
+      { /* Change code below this line */ //}
+      //<TypesOfFruit/>
+      //{ /* Change code above this line */ }
+    //</div>
+  //);
+//};*/
+
+/*class TypesOfFood extends React.Component {
+  constructor(props) {
+    super(props);
   }
-};
 
+  render() {
+    return (
+      <div>
+        <h1>Types of Food:</h1>
+        { /* Change code below this line */ //}
+        //<Fruits/>
+        //{ /* Change code above this line */ }
+      //</div>
+    //);
+  //}
+//};*/
+//class Fruits extends React.Component {
+  //constructor(props) {
+    //super(props);
+  //}
+  //render() {
+    //return (
+      //<div>
+        //<h2>Fruits:</h2>
+        //{ /* Change code below this line */ }
+          //<NonCitrus />
+          //<Citrus />
+        //{ /* Change code above this line */ }
+      //</div>
+    //);
+ // }
+//};
+//
+//class TypesOfFood extends React.Component {
+  //constructor(props) {
+     //super(props);
+  //}
+  //render() {
+    //return (
+      //<div>
+        //<h1>Types of Food:</h1>
+        //{ /* Change code below this line */ }
+        //<Fruits/>
+        //{ /* Change code above this line */ }
+        //<Vegetables />
+      //</div>
+    //);
+  //}
+//};
+//-------------------------------------------------------
+/*class TypesOfFood extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div id='challenge-node'>
+        <h1>Types of Food:</h1>
+        {/* Change code below this line *///}
+          //<Fruits/>
+          //<Vegetables/>
+        //{/* Change code above this line */}
+      //</div>
+    //);
+  //}
+//  
+//};*/
 
+// Change code below this line
+//ReactDOM.render(<TypesOfFood/>, document.getElementById("challenge-node"));
+
+class MyComponent extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return(
+      <div id="challenge-node">
+        <h1>My First React Component!</h1>
+      </div>
+    )
+  }
+}
+//ReactDOM.render(<MyComponent/>, document.getElementById("challenge-node"));
 function App() {
   
   return (
@@ -127,5 +236,6 @@ function App() {
   
 }
 //export default App;
-//export default MyComponent;
-export default ParentComponent;
+export default MyComponent;
+//export default ParentComponent;
+//export default TypesOfFood;
