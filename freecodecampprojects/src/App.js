@@ -48,7 +48,7 @@ Isso ocorre porque class é uma palavra reservada em JavaScript. Em vez disso, J
   </div>
 );*/
 
-class MyComponent extends React.Component {
+/*class MyComponent extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -60,6 +60,45 @@ class MyComponent extends React.Component {
 
 
     // Change code above this line
+  }
+};*/
+
+/*Imagine que você está construindo um aplicativo e criou três componentes: barra de navegação, painel e rodapé.
+
+Para compor esses componentes juntos, você pode criar um componente pai App que renderiza cada um desses três 
+componentes como filhos. Para renderizar um componente como filho em um componente React, inclua o nome do 
+componente escrito como uma tag HTML personalizada no JSX. Por exemplo, no método render você poderia escrever:
+return (
+ <App>
+  <Navbar />
+  <Dashboard />
+  <Footer />
+ </App>
+)
+*/
+
+const ChildComponent = () => {
+  return (
+    <div>
+      <p>I am the child</p>
+    </div>
+  );
+};
+
+class ParentComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>I am the parent</h1>
+        { /* Change code below this line */ }
+        <ChildComponent/>
+
+        { /* Change code above this line */ }
+      </div>
+    );
   }
 };
 
@@ -88,4 +127,5 @@ function App() {
   
 }
 //export default App;
-export default MyComponent;
+//export default MyComponent;
+export default ParentComponent;
