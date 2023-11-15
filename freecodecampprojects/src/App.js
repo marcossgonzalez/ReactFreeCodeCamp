@@ -22,13 +22,23 @@ Isso ocorre porque class é uma palavra reservada em JavaScript. Em vez disso, J
     //<h1>Add a class to this div</h1>
   //</div>
 //);
-const JSX = (
-  <div>
-    <h2>Welcome to React!</h2> <br></br>
-    <p>Be sure to close all tags!</p>
-    <hr></hr>
-  </div>
-);
+//const JSX = (
+  //<div>
+    //<h2>Welcome to React!</h2> <br></br>
+    //<p>Be sure to close all tags!</p>
+    //<hr></hr>
+  //</div>
+//);
+
+const MyComponent = function() {
+  // Change code below this line
+  return (
+    <div><p>Hello World</p></div>
+  );
+
+
+  // Change code above this line
+}
 /*const JSX = (
   <div id="challenge-node">
     <h1>Hello World</h1>
@@ -40,7 +50,8 @@ const JSX = (
 function App() {
   
   return (
-    JSX
+    <div></div>
+    //JSX
     //<div></div>
     //JSX
     
@@ -59,5 +70,5 @@ function App() {
   );
   
 }
-
-export default App;
+//export default App;
+export default MyComponent;
