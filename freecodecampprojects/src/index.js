@@ -39,5 +39,5 @@ const Welcome = (props) => <h1>Hello, {props.user}!</h1>
 É padrão chamar esse valor de props e, ao lidar com componentes funcionais sem 
 estado, você basicamente considera isso como um argumento para uma função que retorna 
 JSX. Você pode acessar o valor do argumento no corpo da função. Com componentes de classe, 
-você verá que isso é um pouco diferente.
+você verá que isso é diferente.
 */
