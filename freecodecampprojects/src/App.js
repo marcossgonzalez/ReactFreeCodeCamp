@@ -199,7 +199,7 @@ class ParentComponent extends React.Component {
 // Change code below this line
 //ReactDOM.render(<TypesOfFood/>, document.getElementById("challenge-node"));
 
-class MyComponent extends React.Component{
+/*class MyComponent extends React.Component{
   constructor(props){
     super(props);
   }
@@ -210,7 +210,34 @@ class MyComponent extends React.Component{
       </div>
     )
   }
-}
+}*/
+const CurrentDate = (props) => {
+  
+  return (
+    <div>
+      { /* Change code below this line */ }
+      <p>The current date is: {props.date}</p>
+      { /* Change code above this line */ }
+    </div>
+  );
+};
+
+class Calendar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h3>What date is it?</h3>
+        { /* Change code below this line */ }
+        <CurrentDate date={Date()}/>
+        { /* Change code above this line */ }
+      </div>
+    );
+  }
+};
+
 //ReactDOM.render(<MyComponent/>, document.getElementById("challenge-node"));
 function App() {
   
@@ -236,6 +263,7 @@ function App() {
   
 }
 //export default App;
-export default MyComponent;
+//export default MyComponent;
 //export default ParentComponent;
 //export default TypesOfFood;
+export default Calendar;
