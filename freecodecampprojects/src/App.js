@@ -211,28 +211,55 @@ class ParentComponent extends React.Component {
     )
   }
 }*/
-const CurrentDate = (props) => {
+//const CurrentDate = (props) => {
   
-  return (
-    <div>
-      { /* Change code below this line */ }
-      <p>The current date is: {props.date}</p>
-      { /* Change code above this line */ }
-    </div>
-  );
+  //return (
+    //<div>
+      //{ /* Change code below this line */ }
+      //<p>The current date is: {props.date}</p>
+      //{ /* Change code above this line */ }
+    //</div>
+  //);
+//};
+//class Calendar extends React.Component {
+  //constructor(props) {
+    //super(props);
+  //}
+  //render() {
+    //return (
+      //<div>
+        //<h3>What date is it?</h3>
+        //{ /* Change code below this line */ }
+        //<CurrentDate date={Date()}/>
+        //{ /* Change code above this line */ }
+      //</div>
+    //);
+  //}
+//};
+/*Para passar um array para um elemento JSX, ele deve ser tratado como JavaScript e colocado entre chaves.*/
+/*//<ParentComponent>
+  //<ChildComponent colors={["green", "blue", "red"]} />
+//</ParentComponent> */
+
+const List = (props) => {
+  { /* Change code below this line */ }
+  return <p>{props.tasks.join(", ")}</p>
+  { /* Change code above this line */ }
 };
 
-class Calendar extends React.Component {
+class ToDo extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
       <div>
-        <h3>What date is it?</h3>
-        { /* Change code below this line */ }
-        <CurrentDate date={Date()}/>
-        { /* Change code above this line */ }
+        <h1>To Do Lists</h1>
+        <h2>Today</h2>
+         <List tasks={["walk dog", "workout", "piano"]}/>
+        <h2>Tomorrow</h2>
+        <List tasks={["walk dog", "workout", "piano"]} />
+          
       </div>
     );
   }
@@ -266,4 +293,4 @@ function App() {
 //export default MyComponent;
 //export default ParentComponent;
 //export default TypesOfFood;
-export default Calendar;
+//export default Calendar;

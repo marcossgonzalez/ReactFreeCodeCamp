@@ -14,7 +14,7 @@ root.render(
     {/*<App />*/}
     {/*<MyComponent />*/}
     {/*<TypesOfFood />*/}
-    <Calendar />
+    {/*<Calendar />*/}
   </React.StrictMode>
 );
 
