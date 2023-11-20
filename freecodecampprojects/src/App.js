@@ -332,3 +332,4 @@ function App() {
 //export default ParentComponent;
 //export default TypesOfFood;
 //export default Calendar;
+//export default ShoppingCart;

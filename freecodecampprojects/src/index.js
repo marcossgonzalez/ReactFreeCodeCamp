@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import MyComponent from './App';
 import Calendar from './App';
+import ShoppingCart from './App';
 import TypesOfFood from './App';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -15,6 +16,7 @@ root.render(
     {/*<MyComponent />*/}
     {/*<TypesOfFood />*/}
     {/*<Calendar />*/}
+    {/*<ShoppingCart />*/}
   </React.StrictMode>
 );
 
