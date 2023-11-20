@@ -241,29 +241,48 @@ class ParentComponent extends React.Component {
   //<ChildComponent colors={["green", "blue", "red"]} />
 //</ParentComponent> */
 
-const List = (props) => {
-  { /* Change code below this line */ }
-  return <p>{props.tasks.join(", ")}</p>
-  { /* Change code above this line */ }
-};
+//const List = (props) => {
+  //{ /* Change code below this line */ }
+  //return <p>{props.tasks.join(", ")}</p>
+  //{ /* Change code above this line */ }
+//};
 
-class ToDo extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div>
-        <h1>To Do Lists</h1>
-        <h2>Today</h2>
-         <List tasks={["walk dog", "workout", "piano"]}/>
-        <h2>Tomorrow</h2>
-        <List tasks={["walk dog", "workout", "piano"]} />
+//class ToDo extends React.Component {
+  //constructor(props) {
+  //  super(props);
+  //}
+  //render() {
+   // return (
+     // <div>
+      //  <h1>To Do Lists</h1>
+        //<h2>Today</h2>
+        // <List tasks={["walk dog", "workout", "piano"]}/>
+        //<h2>Tomorrow</h2>
+       // <List tasks={["walk dog", "workout", "piano"]} />
           
-      </div>
-    );
-  }
+     // </div>
+   // );
+  //}
+//};
+//-------------------------------------------------------
+/*O React também tem a opção de definir adereços padrão. Você pode atribuir props padrão a um 
+componente como uma propriedade no próprio componente e o React atribui o prop padrão, se necessário. 
+Isso permite que você especifique qual deve ser um valor prop se nenhum valor for fornecido explicitamente. 
+Por exemplo:
+MyComponent.defaultProps = { location: 'San Francisco' }
+A definição padrão para a propriedade do MyComponent será de `Sao Francisco`
+*/
+const ShoppingCart = (props) => {
+  
+  return (
+    <div>
+      <h1>Shopping Cart Component</h1>
+    </div>
+  )
 };
+// Change code below this line
+ShoppingCart.defaultProps = { items: 0};
+
 
 //ReactDOM.render(<MyComponent/>, document.getElementById("challenge-node"));
 function App() {
