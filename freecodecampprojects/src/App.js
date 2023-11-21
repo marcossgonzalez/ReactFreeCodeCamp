@@ -329,6 +329,7 @@ class ShoppingCart extends React.Component {
  renderiza a propriedade quantidade modificando-a para 10.  
  */
 //ReactDOM.render(<MyComponent/>, document.getElementById("challenge-node"));
+//---------------------------------------------------
 function App() {
   
   return (
