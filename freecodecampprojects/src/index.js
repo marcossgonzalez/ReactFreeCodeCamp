@@ -7,6 +7,7 @@ import ShoppingCart from './App';
 import TypesOfFood from './App';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import PropTypes from 'prop-types';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -16,7 +17,7 @@ root.render(
     {/*<MyComponent />*/}
     {/*<TypesOfFood />*/}
     {/*<Calendar />*/}
-    {/*<ShoppingCart />*/}
+    <ShoppingCart />
   </React.StrictMode>
 );
 
@@ -42,4 +43,26 @@ const Welcome = (props) => <h1>Hello, {props.user}!</h1>
 estado, você basicamente considera isso como um argumento para uma função que retorna 
 JSX. Você pode acessar o valor do argumento no corpo da função. Com componentes de classe, 
 você verá que isso é diferente.
+*/
+
+/*O React fornece recursos úteis de verificação de tipo para verificar se os componentes 
+recebem adereços do tipo correto. Por exemplo, seu aplicativo faz uma chamada de API para 
+recuperar dados que você espera que estejam em um array, que são então passados para um componente 
+como uma propriedade. Você pode definir propTypes em seu componente para exigir que os dados sejam 
+do tipo array. Isso lançará um aviso útil quando os dados forem de qualquer outro tipo.
+
+
+É considerada uma prática recomendada definir propTypes quando você conhece o tipo de adereço 
+com antecedência. Você pode definir uma propriedade propTypes para um componente da mesma forma
+que definiu defaultProps. Fazer isso verificará se os adereços de uma determinada chave estão 
+presentes em um determinado tipo. Aqui está um exemplo para exigir a função type para uma propriedade 
+chamada handleClick:
+MyComponent.propTypes = { handleClick: PropTypes.func.isRequired }
+
+No exemplo acima, a parte PropTypes.func verifica se handleClick é uma função. Adicionar isRequired 
+informa ao React que handleClick é uma propriedade obrigatória para esse componente. Você verá um aviso 
+se esse suporte não for fornecido. Observe também que func representa função. Entre os sete tipos primitivos 
+de JavaScript, function e boolean (escritos como bool) são os únicos que usam ortografia incomum. Além
+dos tipos primitivos, existem outros tipos disponíveis. Por exemplo, você pode verificar se um prop é 
+um elemento React.
 */

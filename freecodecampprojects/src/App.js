@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 
 //const jsx= <div></div>;
@@ -283,26 +283,51 @@ A definição padrão para a propriedade do MyComponent será de `Sao Francisco`
 // Change code below this line
 //ShoppingCart.defaultProps = { items: 0};
 //-----------------------------------------------
+//const Items = (props) => {
+  //return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+//}
+
+//Items.defaultProps = {
+  //quantity: 0
+//}
+
+//class ShoppingCart extends React.Component {
+  //constructor(props) {
+    //super(props);
+  //}
+  //render() {
+    //{ /* Change code below this line */ }
+    //return <Items quantity={10}/>
+    //{ /* Change code above this line */ }
+  //}
+//};
+//-------------------------------------------------
 const Items = (props) => {
   return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
-}
+};
+
+// Change code below this line
+Items.propTypes = {quantity: PropTypes.number.isRequired}
+// Change code above this line
 
 Items.defaultProps = {
   quantity: 0
-}
+};
 
 class ShoppingCart extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    { /* Change code below this line */ }
-    return <Items quantity={10}/>
-    { /* Change code above this line */ }
+    return <Items quantity= {10}/>
   }
 };
-
-
+/**
+ Explicacao: Items.propTypes verifica, com a atribuicao a variavel, se a prop, ou propriedade, quantity é igual, levando os dois
+ pontos em consideracao na equacao, a PropTypes do tipo number; sendo, pelo uso do validador isRequired. Depois disso, verificada
+ a natureza da quantidade, a propriedade quantidade é passada como propriedade filha de Items para o Pai ShoppingCart, que
+ renderiza a propriedade quantidade modificando-a para 10.  
+ */
 //ReactDOM.render(<MyComponent/>, document.getElementById("challenge-node"));
 function App() {
   
@@ -332,4 +357,4 @@ function App() {
 //export default ParentComponent;
 //export default TypesOfFood;
 //export default Calendar;
-//export default ShoppingCart;
+export default ShoppingCart;
