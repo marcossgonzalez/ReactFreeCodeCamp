@@ -302,26 +302,26 @@ A definição padrão para a propriedade do MyComponent será de `Sao Francisco`
   //}
 //};
 //-------------------------------------------------
-const Items = (props) => {
-  return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
-};
+//const Items = (props) => {
+  //return <h1>Current Quantity of Items in Cart: {props.quantity}</h1>
+//};
 
 // Change code below this line
-Items.propTypes = {quantity: PropTypes.number.isRequired}
+//Items.propTypes = {quantity: PropTypes.number.isRequired}
 // Change code above this line
 
-Items.defaultProps = {
-  quantity: 0
-};
+//Items.defaultProps = {
+  //quantity: 0
+//};
 
-class ShoppingCart extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return <Items quantity= {10}/>
-  }
-};
+//class ShoppingCart extends React.Component {
+  //constructor(props) {
+    //super(props);
+  //}
+  //render() {
+    //return <Items quantity= {10}/>
+  //}
+//};
 /**
  Explicacao: Items.propTypes verifica, com a atribuicao a variavel, se a prop, ou propriedade, quantity é igual, levando os dois
  pontos em consideracao na equacao, a PropTypes do tipo number; sendo, pelo uso do validador isRequired. Depois disso, verificada
@@ -330,10 +330,44 @@ class ShoppingCart extends React.Component {
  */
 //ReactDOM.render(<MyComponent/>, document.getElementById("challenge-node"));
 //---------------------------------------------------
-function App() {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+  render() {
+    return (
+        <div>
+            { /* Change code below this line */ }
+            <Welcome name = "Marcos" />
+            { /* Change code above this line */ }
+        </div>
+    );
+  }
+};
+
+
+
+class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+  render() {
+    return (
+        <div>
+          { /* Change code below this line */ }
+          <p>Hello, <strong>{this.props.name}</strong>!</p>
+          { /* Change code above this line */ }
+        </div>
+    );
+  }
+};
+
+//function App() {
   
-  return (
-    <div></div>
+  //return (
+    //<div></div>
     //JSX
     //<div></div>
     //JSX
@@ -350,12 +384,12 @@ function App() {
   //</ul></jsx>*/}
     //</div>
     
-  );
+  //);
   
-}
-//export default App;
+//}
+export default App;
 //export default MyComponent;
 //export default ParentComponent;
 //export default TypesOfFood;
 //export default Calendar;
-export default ShoppingCart;
+//export default ShoppingCart;

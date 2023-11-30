@@ -13,11 +13,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    {/*<App />*/}
+    <App />
     {/*<MyComponent />*/}
     {/*<TypesOfFood />*/}
     {/*<Calendar />*/}
-    <ShoppingCart />
+    {/*<ShoppingCart />*/}
   </React.StrictMode>
 );
 
@@ -66,3 +66,8 @@ de JavaScript, function e boolean (escritos como bool) são os únicos que usam 
 dos tipos primitivos, existem outros tipos disponíveis. Por exemplo, você pode verificar se um prop é 
 um elemento React.
 */
+
+/*Para essa lição devemos lembrar como adicionar props ao componente parente:
+<Ex nome = "Nome"/>
+e, após isso, usar os props do child-component.
+<p>{this.props.nome}</p>*/
